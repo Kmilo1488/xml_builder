@@ -219,7 +219,7 @@ defmodule XmlBuilder do
     standalone =
       case Keyword.get(options, :standalone, false) do
         true -> ~s| standalone="yes"|
-        false -> ""
+        false -> ~s| standalone="no"|
       end
 
     ~s|<?xml version="1.0" encoding="#{encoding}"#{standalone}?>|
